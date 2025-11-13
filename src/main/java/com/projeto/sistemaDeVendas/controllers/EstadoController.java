@@ -4,6 +4,7 @@ import com.projeto.sistemaDeVendas.models.Estado;
 import com.projeto.sistemaDeVendas.repositories.EstadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,6 +33,11 @@ public class EstadoController {
         return cadastrar(new Estado());
         }
 
+    @GetMapping("listaEstados")
+    public String listaEstados(Model model) {
+        model.addAttribute("listaEstados", estadoRepository.findAll());
+        return "listaEstados";
+    }
 
 
 }
