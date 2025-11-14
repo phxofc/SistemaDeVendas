@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Início</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            min-width: 220px;
+            max-width: 220px;
+            background: #0d6efd;
+            color: white;
+            padding-top: 20px;
+        }
+
+        #sidebar a {
+            color: white;
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        #sidebar a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Conteúdo da página */
+        #content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+    <div class="text-center mb-4">
+        <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/05/Logo-Lobo-PNG.png" width="50">
+        <h5 class="mt-2">Pedro Sistema</h5>
+    </div>
+
+    <a href="/cadastroEstado">Cadastrar Estado</a>
+    <a href="/listaEstados">Listar Estados</a>
+</div>
+
+<!-- CONTEÚDO -->
+<div id="content">
+
+    <!-- NAVBAR SUPERIOR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded">
+        <a class="navbar-brand" href="#">Painel Inicial</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#conteudoNavbarSuportado">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(atual)</span></a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+    <h1 class="mt-4">Bem-vindo ao INICIO</h1>
+    <p>Este é um exemplo de parágrafo.</p>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
